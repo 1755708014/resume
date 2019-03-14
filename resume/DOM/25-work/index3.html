@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .active {
+            background: #000;
+            color: #fff;
+        }
+
+        #main {
+            border: 1px;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <h1>hello</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut doloremque dolores excepturi nemo optio quia
+        quod, temporibus ullam unde? Autem consectetur eaque id illo minima molestiae sapiente voluptate. Minus!</p>
+</div>
+<button class="add">add</button>
+<button class="remove">remove</button>
+<button class="toggle">toggle</button>
+<button class="toggles">toggle</button>
+</body>
+<script>
+  var main = document.querySelector('#main')
+  document.querySelector('.add').addEventListener('click', () => {
+    main.className = 'active'
+  })
+  document.querySelector('.remove').addEventListener('click', () => {
+    main.classList.remove('active')
+  })
+  document.querySelector('.toggle').addEventListener('click', () => {
+    console.log(main.classList)
+    main.classList.toggle('active')
+  })
+  document.querySelector('.toggles').addEventListener('click', () => {
+    console.log(main.classList)
+    main.classList.toggle('active')
+  })
+</script>
+</html>
