@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .img-preview{
+            height: 200px;
+            width: 200px;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
+<ul class="ct">
+    <li data-img="1.jpg">鼠标放置查看图片1</li>
+    <li data-img="2.jpg">鼠标放置查看图片2</li>
+    <li data-img="3.jpg">鼠标放置查看图片3</li>
+</ul>
+<div class="img-preview"></div>
+<script>
+  let li = document.getElementsByTagName('li')
+  for (let i = 0; i < li.length; i++) {
+    li[i].addEventListener('mouseenter', clickEvent)
+  }
 
+  function clickEvent (e) {
+    document.querySelector('.img-preview').style.backgroundImage = `url(${this.getAttribute('data-img')})`
+  }
+</script>
 </body>
 </html>
