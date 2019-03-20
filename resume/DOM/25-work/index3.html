@@ -41,5 +41,16 @@
     console.log(main.classList)
     main.classList.toggle('active')
   })
+
+  function css (node, styleObj) {
+    for (let i in styleObj) {
+      node.style[i] = styleObj[i]
+    }
+  }
+
+  css(document.body, {
+    'color': 'red',
+    'background-color': '#ccc'
+  })
 </script>
 </html>
